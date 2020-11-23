@@ -1,0 +1,33 @@
+<div class="container">
+    <h2>Edit {{name}}</h2>
+    <form method="POST" action="/celebrations/edit-celebration?celebrations_id={{_id}}">
+        <div class="form">
+            <label>Celebration Name</label>
+            <input type="text" class="form-control" name="name" value="{{name}}">
+        </div>
+        <div class="form">
+            <label>Celebration Date</label>
+            <input type="text" class="form-control" name="date" value="{{date}}">
+        </div>
+        <div class="form">
+            <label>Celebration Description</label>
+            <input type="text" class="form-control" name="description" value="{{description}}">
+        </div>
+        <div class="form">
+            <label>Traditions</label>
+            <input type="text" class="form-control" name="traditions" value="{{traditions}}">
+        </div>
+        {{!-- <div class="form">
+            <label>Country/ Countries</label>
+            <select class="form-control" name="country">
+                <option>Choose</option>
+                {{#each countries}}
+                <option value="{{name}}">{{name}}</option>
+                {{/each}}
+            </select> --}}
+        {{!-- </div> --}}
+
+
+        <button type="submit" class="btn ">Edit Celebration</button>
+    </form>
+</div>

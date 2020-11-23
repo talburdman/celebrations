@@ -1,0 +1,29 @@
+<div class="container">
+    <h2>Name: {{name}}</h2>
+
+    <hr>
+    <p><strong>Date:</strong> {{date}}</p>
+    <br>
+    <p><strong>Description:</strong> {{description}}</p>
+    <br>
+    <p><strong>Traditions:</strong> {{traditions}}</p>
+    <br>
+    <p><strong>Country/ Countries:</strong> {{country}}</p>
+    <br>
+    <div>
+        <img src="" alt="{{name}}">
+    </div>
+
+    <button type="button" class="btn " id="btn-link">
+        <a href="/celebrations">Back to Celebrations</a>
+    </button>
+
+    {{#if isAdmin}}
+    <a href="/admin/users-list" class="btn ">See all users</a>
+    <a href="/admin/delete-user" class="btn btn-danger">Delete user</a>
+    <a href="/admin/edit-user" class="btn ">Edit user</a>
+
+    {{/if}}
+
+
+</div>
