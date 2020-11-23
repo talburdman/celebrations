@@ -1,6 +1,10 @@
 <div class="container">
-    <h2>{{name}}</h2>
 
+    <div class="title">
+    <h2>{{name}}</h2>
+    </div>
+
+    <div class="main">
     <hr>
     <p><strong>Description</strong> {{description}}</p>
     <br>
@@ -9,10 +13,18 @@
     <p><strong>Location</strong> {{location}}</p>
     <br>
     <img src="" alt="{{name}}">
+    </div>
 
+    <div class="row justify-content-center">
+    <a href="/countries" class="btn">Back to Countries</a>
+    </div>
 
-    <button type="button" class="btn btn-secondary">
-        <a href="/countries">Back to Countries</a>
-    </button>
+    {{#if isAdmin}}
+    <div class="row justify-content-center">
+        <a href="/admin/users-list" class="btn ">See all users</a>
+        <a href="/admin/delete-user" class="btn btn-danger">Delete user</a>
+        <a href="/admin/edit-user" class="btn ">Edit user</a>
+    </div>
+    {{/if}}
 
 </div>
