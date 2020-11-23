@@ -1,6 +1,13 @@
 <div class="container">
+
+    <div=class="title">
     <h2>Add User</h2>
+    </div>
+    
+
     <form method="POST" action="/admin/new">
+
+    <div class="main">
         <div class="form">
             <label>Username</label>
             <input type="text" class="form-control" name="username">
@@ -25,20 +32,12 @@
             <label>Email</label>
             <input type="email" class="form-control" name="email">
         </div>
-        {{!-- <div class="form">
-            <label>Country/ Countries</label>
-            <select name="country" class="form-control">
-                {{#each countries}}
-                <option value="{{name}}">{{name}}</option>
-                {{/each}}
-            </select>
-            
-        </div> --}}
-        <div class="form">
-            <label>Image</label>
-            <input type="img" class="form-control" name="image">
-        </div>
+    </div>
+
+    <div class="row justify-content-center">
         <button type="submit" class="btn ">Add User</button>
+    </div>
+
     </form>
 
 </div>

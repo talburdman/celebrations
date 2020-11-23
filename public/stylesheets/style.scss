@@ -1,4 +1,5 @@
 body {
+
   font-family: "Book Antiqua",
     Palatino,
     serif;
@@ -11,49 +12,86 @@ h1,
 h2,
 h3,
 p {
+
   color: rgb(73, 73, 73);
   font-weight: 100;
   padding-top: 20px;
+
 }
 
+
 #logo {
+
   width: 30px;
+
 }
 
 #btn-link a {
+
   text-decoration: none;
   color: white;
+
 }
 
 .navbar {
+
   background-color: #ff9642;
+
 }
 
 .navbar a {
+
   text-decoration: none;
   color: rgb(73, 73, 73);
+
+}
+
+.title {
+
+  padding: 50px 50px 10px 50px;
+
+}
+
+.subtitle {
+
+  padding: 0px 50px 10px 50px;
+
 }
 
 .main {
+
   text-align: center;
-  margin-top: 80px;
+  margin-top: 20px;
   padding-bottom: 20px;
+
+}
+
+.celebration {
+
+  text-align: left;
+
 }
 
 .btn {
+
   background-color: #FF9642;
   color: white;
   border-radius: 50px;
   padding: 10px 50px;
+
 }
 
 #mainimg {
+
   width: 300px;
+
 }
 
 .list {
+
   text-decoration: none;
   color: rgb(73, 73, 73);
   font-size: 20px;
   letter-spacing: 2px;
+
 }

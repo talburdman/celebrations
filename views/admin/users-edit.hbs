@@ -1,6 +1,13 @@
 <div class="container">
+
+    <div =class="title">
     <h2>Edit {{name}}</h2>
+    </div>
+    
+    
     <form method="POST" action="/admin/edit-user?user_id={{_id}}">
+
+    <div class="main">
         <div class="form">
             <label>Username</label>
             <input type="text" class="form-control" name="username" value="{{username}}">
@@ -25,8 +32,11 @@
             <label>User email</label>
             <input type="email" class="form-control" name="email" value="{{email}}">
         </div>
+    </div>
 
-
-        <button type="submit" class="btn ">Edit User</button>
+        <div class="row justify-content-center">
+        <button type="submit" class="btn ">Edit User</button>    
+        </div>
+    
     </form>
 </div>
