@@ -9,10 +9,8 @@ router.get('/', (req, res) => {
     
 
     Celebration
-        .find()
+        .find().sort({ name: 1 })
         .then(allCelebrationsCreated => {
-            // console.log('las celebs son:', allCelebrationsCreated)
-            
             res.render('celebrations/celebrations-list', {allCelebrationsCreated})
         })
         .catch(err => console.log(err))
