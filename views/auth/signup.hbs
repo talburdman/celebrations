@@ -2,28 +2,33 @@
     <div class="row justify-content-center">
         <div class="col-md-6">
 
-            <h1>Sign up</h1>
+            <div class="title row justify-content-center">
+                <h1>Sign up</h1>
+            </div>
 
             <form action="/signup" method="POST">
-                <div class='form-group'>
-                    <label for='username'>Username</label>
-                    <input name='username' type='text' class='form-control' placeholder='username' id='username'>
+                <div class="main celebration">
+                    <div class='form-group'>
+                        <label for='username'>Username</label>
+                        <input name='username' type='text' class='form-control' placeholder='username' id='username'>
+                    </div>
+                    <div class='form-group'>
+                        <label for='email'>Email</label>
+                        <input name='email' type='email' class='form-control' placeholder='youremail@address.com'
+                            id='email'>
+                    </div>
+                    <div class='form-group'>
+                        <label for='password'>Password</label>
+                        <input name='password' type='password' class='form-control' placeholder='******' id='password'>
+                    </div>
                 </div>
-                <div class='form-group'>
-                    <label for='email'>Email</label>
-                    <input name='email' type='email' class='form-control' placeholder='youremail@address.com'
-                        id='email'>
+                <div class="row justify-content-center">
+                    <button type='submit' class='btn'>Sign up</button>
+                    {{#if errorMsg}}
+                    <p style="margin-top: 10px;background: red; color: white; text-align: center; padding: 10px">
+                        {{errorMsg}}</p>
+                    {{/if}}
                 </div>
-                <div class='form-group'>
-                    <label for='password'>Password</label>
-                    <input name='password' type='password' class='form-control' placeholder='******' id='password'>
-                </div>
-
-                <button type='submit' class='btn'>Sign up</button>
-                {{#if errorMsg}}
-                <p style="margin-top: 10px;background: red; color: white; text-align: center; padding: 10px">
-                    {{errorMsg}}</p>
-                {{/if}}
             </form>
 
         </div>

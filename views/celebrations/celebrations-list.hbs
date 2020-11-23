@@ -1,28 +1,39 @@
 <div class="container">
-    <h2>Celebrations</h2>
 
-    <ul>
-        {{#each allCelebrationsCreated}}
-        <li><a href="/celebrations/details/{{_id}}" class="list">{{this.name}}</a>
-            {{!-- {{#if isAdmin}} --}}
-            <small>
-                [<a href="/celebrations/delete-celebration?celebration_id={{_id}}">Delete</a>]
-            </small>
-            {{!-- {{/if}} --}}
-            {{!-- {{#if isUser}} --}}
-            <small>
-                [<a href="/celebrations/edit-celebration?celebration_id={{_id}}">Edit</a>]
-            </small>
-            {{!-- {{/if}} --}}
+    <div class="title row justify-content-center">
+        <h2>Celebrations</h2>
+    </div>
+
+    <div class="main row justify-content-center">
+        <ul>
+            {{#each allCelebrationsCreated}}
+            <div class="celebration">
+                <li><a href="/celebrations/details/{{_id}}" class="list">{{this.name}}</a>
+                    {{!-- {{#if isAdmin}} --}}
+                    <small>
+                        [<a href="/celebrations/delete-celebration?celebration_id={{_id}}">Delete</a>]
+                    </small>
+                    {{!-- {{/if}} --}}
+                    {{!-- {{#if isUser}} --}}
+                    <small>
+                        [<a href="/celebrations/edit-celebration?celebration_id={{_id}}">Edit</a>]
+                    </small>
+                    {{!-- {{/if}} --}}
+                </li>
+            </div>
             {{/each}}
-        </li>
-    </ul>
 
+        </ul>
+    </div>
+
+    <div class="row justify-content-center">
+        <a href="/celebrations/new" class="btn">Add Celebration</a>
+    </div>
     {{!-- preguntar a PO sobre si hay que poner user and admin o solo user --}}
     {{!-- {{#if isUser}} --}}
-    <button type="button" class="btn" id='btn-link'>
+    {{!-- <button type="button" class="btn" id='btn-link'>
         <a href="/celebrations/new">Add Celebration</a>
-    </button>
+    </button> --}}
     {{!-- {{/if}} --}}
 
 </div>

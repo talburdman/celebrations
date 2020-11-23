@@ -1,25 +1,35 @@
 <div class="container">
 
-    <h1>¡Welcome to your Profile {{username}}!</h1>
-    <p>You are logged in as {{role}}</p>
+    <div class="row justify-content-center">
+        <div class="col-md-6">
 
-    <h2>Account information</h2>
-    <p>Name: {{name}}</p>
-    <p>Description: {{description}}</p>
-    <p>Email: {{email}}</p>
-    <hr>
+            <div class="title row justify-content-center">
+                <h1>¡Welcome to your Profile {{username}}!</h1>
+                <p>You are logged in as {{role}}</p>
+            </div>
+            <div class="main celebration">
+                <h2>Account information</h2>
+                <p>Name: {{name}}</p>
+                <p>Description: {{description}}</p>
+                <p>Email: {{email}}</p>
+                <hr>
+            </div>
 
 
 
 
 
-    {{#if isAdmin}}
+            {{#if isAdmin}}
 
-    <a href="/admin/users-list" class="btn ">See all users</a>
-    <a href="/admin/delete-user" class="btn btn-danger">Delete user</a>
-    <a href="/admin/edit-user" class="btn ">Edit user</a>
+            <a href="/admin/users-list" class="btn">See all users</a>
+            <a href="/admin/delete-user" class="btn btn-danger">Delete user</a>
+            <a href="/admin/edit-user" class="btn">Edit user</a>
 
-    {{/if}}
+            {{/if}}
 
-    <a href="/close" class="btn ">Close session</a>
+            <div class="row justify-content-center">
+                <a href="/close" class="btn ">Close session</a>
+            </div>
+        </div>
+    </div>
 </div>

@@ -6,14 +6,14 @@ const User = require('./../models/User.model')
 
 //List all Celebrations
 router.get('/', (req, res) => {
-    
+//   console.log('el user', req.user)  
 
     Celebration
-        .find()
+        .find().sort({ name: 1})
         .then(allCelebrationsCreated => {
-            // console.log('las celebs son:', allCelebrationsCreated)
+        //    console.log('las celebs son:', allCelebrationsCreated)
             
-            res.render('celebrations/celebrations-list', {allCelebrationsCreated})
+            res.render('celebrations/celebrations-list', {allCelebrationsCreated, isAdmin: true})
         })
         .catch(err => console.log(err))
 });

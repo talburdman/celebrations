@@ -34,10 +34,22 @@ p {
   color: rgb(73, 73, 73);
 }
 
+.title {
+  padding: 50px 50px 10px 50px;
+}
+
+.subtitle {
+  padding: 0px 50px 10px 50px;
+}
+
 .main {
   text-align: center;
-  margin-top: 80px;
+  margin-top: 20px;
   padding-bottom: 20px;
+}
+
+.celebration {
+  text-align: left;
 }
 
 .btn {
