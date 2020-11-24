@@ -6,33 +6,34 @@ const User = require('./../models/User.model')
 const bcryptjs = require("bcryptjs")
 const bcryptSalt = 10
 
-//Create User List
+
+// Create User List
+
 router.get('/users-list', (req, res) => {
     
 
     User
         .find()
-        .then(allUsersCreated => {
-            
-            
-            res.render('admin/users-list', {allUsersCreated})
-        })
+        .then(allUsersCreated => res.render('admin/users-list', {allUsersCreated}))
         .catch(err => console.log(err))
-});
+})
 
-//User details
+
+// User Details
+
 router.get('/profile/:user_id', (req, res) => {
 
     const userId = req.params.user_id
 
     User
         .findById(userId)
-        .then(theUser => {
-            res.render('profile', theUser)
-        })
+        .then(theUser =>  res.render('profile', theUser))
         .catch(err => console.log(err))
-});
-//Delete user
+})
+
+
+// Delete User
+
 router.get('/delete-user', (req, res) => {
 
     const userId = req.query.user_id
@@ -41,11 +42,15 @@ router.get('/delete-user', (req, res) => {
         .findByIdAndDelete(userId)
         .then(() => res.redirect('/admin/users-list'))
         .catch(err => console.log(err))
-});
+})
 
 
-//para crear nuevo usuario
+// Create New User Get
+
 router.get('/new', (req, res) => res.render('admin/users-new'))
+
+
+// Create New User Post
 
 router.post('/new', (req, res) => {
     const { username, name, password, description, role, email } = req.body
@@ -57,9 +62,11 @@ router.post('/new', (req, res) => {
         .create({ username, name, password: hashPass, description, role, email })
         .then(() => res.redirect('/admin/users-list'))
         .catch(err => console.log(err))
-});
+})
 
-//Edit
+
+// Edit User Get
+
 router.get('/edit-user', (req, res) => {
     const userId = req.query.user_id
 
@@ -68,6 +75,9 @@ router.get('/edit-user', (req, res) => {
         .then(userInfo => res.render('admin/users-edit', userInfo))
         .catch(err => console.log(err))
 })
+
+
+// Edit User Post
 
 router.post('/edit-user', (req, res) => {
     const userId = req.query.user_id
@@ -82,7 +92,6 @@ router.post('/edit-user', (req, res) => {
         .catch(err => console.log(err))
 
     })
-
 
 
 module.exports = router

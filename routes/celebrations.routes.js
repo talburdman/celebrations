@@ -4,21 +4,19 @@ const router = express.Router()
 const Celebration = require('./../models/Celebration.model')
 const User = require('./../models/User.model')
 
-//List all Celebrations
+
+// List All Celebrations
+
 router.get('/', (req, res) => {
-//   console.log('el user', req.user)  
 
     Celebration
         .find().sort({ name: 1})
-        .then(allCelebrationsCreated => {
-        //    console.log('las celebs son:', allCelebrationsCreated)
-            
-            res.render('celebrations/celebrations-list', {allCelebrationsCreated, isAdmin: true})
-        })
+        .then(allCelebrationsCreated => res.render('celebrations/celebrations-list', {allCelebrationsCreated, isAdmin: true}))
         .catch(err => console.log(err))
-});
+})
 
-//Celebration details
+
+// Celebrations Details
 
 router.get('/details/:celebration_id', (req, res) => {
 
@@ -26,25 +24,31 @@ router.get('/details/:celebration_id', (req, res) => {
 
     Celebration
         .findById(celebrationId)
-        .then(theCelebration => {
-            res.render('celebrations/celebrations-details', theCelebration)
-        })
+        .then(theCelebration => res.render('celebrations/celebrations-details', theCelebration))
         .catch(err => console.log(err))
-});
+})
 
-//Celebrations create new
+
+// Celebrations Create New Get
+
 router.get('/new', (req, res) => res.render('celebrations/celebrations-new'))
 
+
+// Celebrations Create New Post
+
 router.post('/new', (req, res) => {
+
     const { name, date, description, traditions, country } = req.body
     
     Celebration
         .create({ name, date, description, traditions, country })
         .then(() => res.redirect('/celebrations'))
         .catch(err => console.log(err))
-});
+})
 
-//Delete celebration
+
+//Delete Celebration
+
 router.get('/delete-celebration', (req, res) => {
 
     const celebrationId = req.query.celebration_id
@@ -52,11 +56,14 @@ router.get('/delete-celebration', (req, res) => {
     Celebration
         .findByIdAndDelete(celebrationId)
         .then(() => res.redirect('/celebrations'))
-    .catch(err => console.log(err))
+        .catch(err => console.log(err))
 })
 
-//Edit user
+
+// Edit For Users Get
+
 router.get('/edit-celebration', (req, res) => {
+
     const celebrationId = req.query.celebration_id
 
     Celebration
@@ -65,11 +72,15 @@ router.get('/edit-celebration', (req, res) => {
         .catch(err => console.log(err))
 })
 
+
+// Edit For Users Post
+
 router.post('/edit-celebration', (req, res) => {
+
     const celebrationId = req.query.celebration_id
 
     const { name, date, description, traditions, country } = req.body
-      console.log('bla bla: ' , celebrationId)
+    
     Celebration
         .findByIdAndUpdate(celebrationId, { name, date, description, traditions, country })
         .then(() => res.redirect('/celebrations'))

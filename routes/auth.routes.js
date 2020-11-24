@@ -8,10 +8,14 @@ const User = require("../models/User.model")
 const bcryptjs = require("bcryptjs")
 const bcryptSalt = 10
 
-// Registro (renderizado formualrio)
+
+// Sing Up Get
+
 router.get("/signup", (req, res) => res.render("auth/signup"))
 
-// Registro (gestión)
+
+// Sing Up Post
+
 router.post("/signup", (req, res, next) => {
 
     const { username, password, email } = req.body
@@ -40,16 +44,22 @@ router.post("/signup", (req, res, next) => {
         .catch(error => next(error))
 })
 
-// Inicio sesión (renderizado formulario)
+
+// Log In Get
+
 router.get("/login", (req, res) => res.render("auth/login", { errorMsg: req.flash("Error") }))
 
-// Inicio sesión (gestión)
+// Log In Post
+
 router.post("/login", passport.authenticate("local", {
     successRedirect: "/profile",
     failureRedirect: "/login",
     failureFlash: true,
     passReqToCallback: true
 }))
+
+
+// Log Out
 
 router.get('/close', (req, res) => {
     req.logout()
