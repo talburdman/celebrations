@@ -16,8 +16,12 @@ p {
   padding-top: 20px;
 }
 
+#mainimg {
+  width: 400px;
+}
+
 #logo {
-  width: 30px;
+  width: 60px;
 }
 
 #btn-link a {
@@ -48,6 +52,17 @@ p {
   padding-bottom: 20px;
 }
 
+.index {
+  margin-top: 20px;
+  padding-bottom: 20px;
+}
+
+.showdetails {
+  text-align: left;
+  margin-top: 20px;
+  padding-bottom: 20px;
+}
+
 .celebration {
   text-align: left;
 }
@@ -57,10 +72,7 @@ p {
   color: white;
   border-radius: 50px;
   padding: 10px 50px;
-}
-
-#mainimg {
-  width: 300px;
+  margin: 5px;
 }
 
 .list {
@@ -68,4 +80,19 @@ p {
   color: rgb(73, 73, 73);
   font-size: 20px;
   letter-spacing: 2px;
+}
+
+.searching {
+  margin: 200px 50px 50px 250px;
+}
+
+.input-group.md-form.form-sm.form-2 input {
+  border: 1px solid #ffca28;
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem; 
+ 
+}
+
+.input-group.md-form.form-sm.form-2 input.amber-border {
+  border: 1px solid #ffca28;
 }

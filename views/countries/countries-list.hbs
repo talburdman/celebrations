@@ -1,20 +1,20 @@
 <div clas="container">
+
+    <div class="title row justify-content-center">
     <h2>Countries</h2>
+    </div>
+    
+    <div class="row justify-content-center">
+    <ul id="countriesList"></ul>
+    </div>
 
-    <ul>
-        {{!-- {{#each allCelebritiesCreated}} --}}
-        <li><a href="/countries/details/{{_id}}" class="list">{{name}}</a>
-
-            {{!-- {{/each}} --}}
-    </ul>
-
-    <button type="button" class="btn btn-secondary">
-        <a href="/">Home</a>
-    </button>
+    <div class="row justify-content-center">
+        <a href="/" class="btn">Home</a>
+    </div>
 
 </div>
 
 
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-<script type="text/javascript" src="../public/javascript/APIHandler.js"></script>
-<script type="text/javascript" src="../public/javascript/index.js"></script>
+<script src="/javascripts/api-handler.js"></script>
+<script src="/javascripts/app-front.js"></script>

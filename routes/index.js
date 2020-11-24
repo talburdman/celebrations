@@ -5,5 +5,5 @@ module.exports = app => {
     app.use('/', require('./auth.routes.js'))
     app.use('/admin', require('./admin.routes.js'))
     app.use('/celebrations', require('./celebrations.routes.js'))
-    // app.use('/countries', require('./countries.routes.js'))
+    app.use('/countries', require('./countries.routes.js'))
 }
