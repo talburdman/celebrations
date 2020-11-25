@@ -7,9 +7,10 @@
     <div class="main row justify-content-center">
         <ul>
             {{#each allCelebrationsCreated}}
-            <div class="celebration">
+            {{> celebrationPartial this}}
+            {{!-- <div class="celebration">
                 <li><a href="/celebrations/details/{{_id}}" class="list">{{this.name}}</a></li>
-            </div>
+            </div> --}}
             {{/each}}
         </ul>
     </div>

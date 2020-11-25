@@ -1,8 +1,11 @@
 const countriesApp = new CountriesApiHandler()
-// router.get('/countries', (req, res) => {
+
 updateCountryList()
+
 function updateCountryList() {
+
     countriesApp
+        
         .getAllCountries()
         .then(response => {
             //    console.log('los paises son:', response.data)
@@ -11,7 +14,7 @@ function updateCountryList() {
             allCountries.forEach(elm => {
                 countriesHtml += `<li class="countries">
                 <div>
-               <a href="/countries/details/name" class="list">${elm.name}</a>
+               <a href="/countries/details/${elm.name}" class="list">${elm.name}</a>
                 </div>
                 </li>`
             })
@@ -32,9 +35,16 @@ function updateCountryList() {
 
 
 // GET COUNTRY
-// apiHandler
-//     .getOneCountry('spain')
-//     .then(data => console.log('La respuesta es', data))
-    // .catch(err => console.log('ERROR!:', err))
+getCountry()
 
+function getCountry() {
+    
+    const country = req.params.country
+
+    countriesApp
+    
+    .getOneCountry(country)
+    .then(data => console.log('La respuesta es', data))
+    .catch(err => console.log('ERROR!:', err))
+}
 

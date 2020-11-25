@@ -12,7 +12,6 @@ router.get("/details/country_name", (req, res, next) => {
     
     const countryName = req.params.country_name
 
-   
         .findById(countryName)
         .then(response => res.render('countries/country-details', response))
         .catch(err => next(err))

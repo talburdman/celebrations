@@ -1,33 +1,26 @@
 <div class="container">
 
     <div class="title row justify-content-center">
-        <h2>Name: {{name}}</h2>
+        <h2>Name: {{theCelebration.name}}</h2>
     </div>
 
     <hr>
     <div class="main showdetails">
-        <p><strong>Date:</strong> {{date}}</p>
+        <p><strong>Date:</strong> {{theCelebration.date}}</p>
         <br>
-        <p><strong>Description:</strong> {{description}}</p>
+        <p><strong>Description:</strong> {{theCelebration.description}}</p>
         <br>
-        <p><strong>Traditions:</strong> {{traditions}}</p>
+        <p><strong>Traditions:</strong> {{theCelebration.traditions}}</p>
         <br>
-        <p><strong>Country/ Countries:</strong> {{country}}</p>
+        <p><strong>Country/ Countries:</strong> {{theCelebration.country}}</p>
         <br>
     </div>
     <div>
-        <img src="" alt="{{name}}">
+        <img src="{theCelebration.image}}" alt="{{name}}">
     </div>
     <div class="row justify-content-center">
         <h5>Do you have any suggestions or info about this celebration? Please send it to admincelebrations@gmail.com
         </h5>
-    </div>
-    {{!-- <button type="button" class="btn " id="btn-link">
-        <a href="/celebrations">Back to Celebrations</a>
-    </button> --}}
-    <div class="row justify-content-center">
-        <a href="/celebrations" class="btn">Back To Celebrations</a>
-        <a href="/" class="btn">Back To Home</a>
     </div>
 
     {{#if isAdmin}}
@@ -36,6 +29,13 @@
         <a href="/celebrations/delete-celebration?celebration_id={{_id}}" class="btn">Delete</a>
     </div>
     {{/if}}
+
+    <div class="row justify-content-center">
+        <a href="/celebrations" class="btn">Back To Celebrations</a>
+        <a href="/" class="btn">Back To Home</a>
+    </div>
+
+
 
 
 </div>

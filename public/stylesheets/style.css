@@ -84,4 +84,11 @@ p {
   border-bottom-right-radius: 0.25re;
   background-color: #ffca28; }
 
+#footer {
+  padding: 10px 15px;
+  background-color: #FF9642; }
+
+.icon-footer {
+  margin: 15px; }
+
 /*# sourceMappingURL=style.css.map */

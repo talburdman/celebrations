@@ -13,9 +13,9 @@ const User = require('./../models/User.model')
 router.get('/', (req, res, next) => {
 
     Celebration
-        .find({}, { name: 1 })
+        .find({}, { name: 1, _id: 1, image: 1 })
         .sort({ name: 1 })
-        .then(allCelebrationsCreated => res.render('celebrations/celebrations-list', {allCelebrationsCreated, isAdmin: true}))
+        .then(allCelebrationsCreated => res.render('celebrations/celebrations-list', {allCelebrationsCreated}))
         .catch(err => next(err))
 })
 
@@ -24,11 +24,20 @@ router.get('/', (req, res, next) => {
 
 router.get('/details/:celebration_id', (req, res, next) => {
 
+    let isAdmin = false
+    
+    if (req.user) {
+        let userRole = req.user.role  
+        if (userRole === "ADMIN") {
+            isAdmin = true
+        } 
+    } 
+    
     const celebrationId = req.params.celebration_id
 
     Celebration
         .findById(celebrationId)
-        .then(theCelebration => res.render('celebrations/celebrations-details', theCelebration))
+        .then(theCelebration => res.render('celebrations/celebrations-details', { theCelebration, isAdmin }))
         .catch(err => next(err))
 })
 
