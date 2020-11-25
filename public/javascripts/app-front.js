@@ -11,7 +11,7 @@ function updateCountryList() {
             allCountries.forEach(elm => {
                 countriesHtml += `<li class="countries">
                 <div>
-                <p>${elm.name}</p>
+               <a href="/countries/details/name" class="list">${elm.name}</a>
                 </div>
                 </li>`
             })
