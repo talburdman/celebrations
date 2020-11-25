@@ -8,32 +8,15 @@
         <ul>
             {{#each allCelebrationsCreated}}
             <div class="celebration">
-                <li><a href="/celebrations/details/{{_id}}" class="list">{{this.name}}</a>
-                    {{!-- {{#if isAdmin}} --}}
-                    <small>
-                        [<a href="/celebrations/delete-celebration?celebration_id={{_id}}">Delete</a>]
-                    </small>
-                    {{!-- {{/if}} --}}
-                    {{!-- {{#if isUser}} --}}
-                    <small>
-                        [<a href="/celebrations/edit-celebration?celebration_id={{_id}}">Edit</a>]
-                    </small>
-                    {{!-- {{/if}} --}}
-                </li>
+                <li><a href="/celebrations/details/{{_id}}" class="list">{{this.name}}</a></li>
             </div>
             {{/each}}
-
         </ul>
     </div>
 
     <div class="row justify-content-center">
         <a href="/celebrations/new" class="btn">Add Celebration</a>
+        <a href="/" class="btn">Back to Home</a>
     </div>
-    {{!-- preguntar a PO sobre si hay que poner user and admin o solo user --}}
-    {{!-- {{#if isUser}} --}}
-    {{!-- <button type="button" class="btn" id='btn-link'>
-        <a href="/celebrations/new">Add Celebration</a>
-    </button> --}}
-    {{!-- {{/if}} --}}
 
 </div>

@@ -1,5 +1,5 @@
 <div class="container">
-    
+
     <div class="title row justify-content-center">
         <h2>Name: {{name}}</h2>
     </div>
@@ -18,19 +18,22 @@
     <div>
         <img src="" alt="{{name}}">
     </div>
-
+    <div class="row justify-content-center">
+        <h5>Do you have any suggestions or info about this celebration? Please send it to admincelebrations@gmail.com
+        </h5>
+    </div>
     {{!-- <button type="button" class="btn " id="btn-link">
         <a href="/celebrations">Back to Celebrations</a>
     </button> --}}
     <div class="row justify-content-center">
-        <a href="/celebrations" class="btn">Back to Celebrations</a>
+        <a href="/celebrations" class="btn">Back To Celebrations</a>
+        <a href="/" class="btn">Back To Home</a>
     </div>
 
     {{#if isAdmin}}
     <div class="row justify-content-center">
-        <a href="/admin/users-list" class="btn ">See all users</a>
-        <a href="/admin/delete-user" class="btn btn-danger">Delete user</a>
-        <a href="/admin/edit-user" class="btn ">Edit user</a>
+        <a href="/celebrations/edit-celebration?celebration_id={{_id}}" class="btn">Edit</a>
+        <a href="/celebrations/delete-celebration?celebration_id={{_id}}" class="btn">Delete</a>
     </div>
     {{/if}}
 

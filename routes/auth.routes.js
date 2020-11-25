@@ -18,9 +18,9 @@ router.get("/signup", (req, res) => res.render("auth/signup"))
 
 router.post("/signup", (req, res, next) => {
 
-    const { username, password, email } = req.body
+    const { username, name, description, email, password } = req.body
 
-    if (username === "" || password === "" || email === "") {
+    if (username === "" || name === "" || description === "" || email === "" || password === "" ) {
         res.render("auth/signup", { errorMsg: "Fill in all the information" })
         return
     }
@@ -37,7 +37,7 @@ router.post("/signup", (req, res, next) => {
             const salt = bcryptjs.genSaltSync(bcryptSalt)
             const hashPass = bcryptjs.hashSync(password, salt)
 
-            User.create({ username, password: hashPass, email })
+            User.create({ username, name, description, email, password: hashPass })
                 .then(() => res.redirect('/'))
                 .catch(() => res.render("auth/signup", { errorMsg: "Error" }))
         })
