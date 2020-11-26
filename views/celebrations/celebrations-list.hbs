@@ -5,14 +5,11 @@
     </div>
 
     <div class="main row justify-content-center">
-        <ul>
-            {{#each allCelebrationsCreated}}
-            {{> celebrationPartial this}}
-            {{!-- <div class="celebration">
-                <li><a href="/celebrations/details/{{_id}}" class="list">{{this.name}}</a></li>
-            </div> --}}
-            {{/each}}
-        </ul>
+
+        {{#each allCelebrationsCreated}}
+        {{> celebrationPartial this}}
+        {{/each}}
+
     </div>
 
     <div class="row justify-content-center">

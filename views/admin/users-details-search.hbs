@@ -1,0 +1,21 @@
+<div class="container justify-content-center">
+
+    {{#each returnedUsers}}
+
+    <div class="title column justify-content-center">
+        <h1>Profile: {{username}}</h1>
+        <br>
+        <p>Role: {{role}}</p>
+    </div>
+
+    <div class="main celebration">
+        <h2>Account information</h2>
+        <p>Name: {{name}}</p>
+        <p>Description: {{description}}</p>
+        <p>Email: {{email}}</p>
+        <hr>
+    </div>
+
+    {{/each}}
+
+</div>

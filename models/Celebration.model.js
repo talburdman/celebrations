@@ -23,7 +23,6 @@ const celebrationSchema = new Schema({
     timestamps: true
 });
 
-// celebrationSchema.index({ location: '2dsphere' });
 
 const Celebration = mongoose.model('Celebration', celebrationSchema);
 

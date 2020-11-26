@@ -49,9 +49,11 @@ router.post("/signup", (req, res, next) => {
 
 router.get("/login", (req, res) => res.render("auth/login", { errorMsg: req.flash("Error") }))
 
+
 // Log In Post
 
 router.post("/login", passport.authenticate("local", {
+
     successRedirect: "/profile",
     failureRedirect: "/login",
     failureFlash: true,
@@ -62,6 +64,7 @@ router.post("/login", passport.authenticate("local", {
 // Log Out
 
 router.get('/close', (req, res) => {
+    
     req.logout()
     res.redirect("/login")
 })

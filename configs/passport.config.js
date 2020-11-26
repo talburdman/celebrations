@@ -3,7 +3,7 @@ const bcryptjs = require("bcryptjs")
 const passport = require("passport")
 const LocalStrategy = require("passport-local").Strategy
 
-const flash = require("connect-flash")          // error control
+const flash = require("connect-flash")          // Error Control
 
 const User = require('./../models/User.model')
 
@@ -24,7 +24,7 @@ module.exports = app => {
         })
     })
 
-    app.use(flash())             // error control
+    app.use(flash())             // Error Control
 
     passport.use(new LocalStrategy({ passReqToCallback: true }, (req, username, password, next) => {
         User.findOne({ username }, (err, user) => {

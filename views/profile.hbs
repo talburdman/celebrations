@@ -17,24 +17,37 @@
                 <hr>
             </div>
 
-
-
+            <div class="row justify-content-center">
+                <a href="/close" class="btn ">Close session</a>
+            </div>
 
             <div class="row justify-content-center">
+
                 {{#if isAdmin}}
 
                 <a href="/admin/users-list" class="btn">See all users</a>
                 <a href="/admin/edit-user" class="btn">Edit user</a>
                 <a href="/admin/delete-user" class="btn btn-danger">Delete user</a>
 
+                <form method="POST" action="/admin/search">
+
+                    <div class="input-group md-form form-sm form-2 pl-0">
+                        <input class="form-control my-0 py-1 amber-border" type="text" name="userName"
+                            placeholder="Search" aria-label="Search">
+                        <div class="input-group-append">
+                            <button type="submit" class="input-group-text amber lighten-3" id="basic-text1"><i
+                                    class="fa fa-search text-grey" aria-hidden="true"></i></button>
+                        </div>
+                    </div>
+
+                </form>
+
                 {{/if}}
-            </div>
 
-            <div class="row justify-content-center">
-                <a href="/close" class="btn ">Close session</a>
             </div>
-
 
         </div>
+
     </div>
+
 </div>

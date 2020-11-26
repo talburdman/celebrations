@@ -1,41 +1,45 @@
 Id	Method	Path	Description
-1	get	/countries/list	Muestra la lista de países
-2	get	/countries/:id***	Muestra los detalles de un país 
-3	get	/celebrations/list	Muestra la lista de celebraciones
-4	get	/celebrations/details***	Muestra detalles de la celebración
-5	get	/celebrations/new	Muestra el formulario para crear celebración
-6	post	/celebrations/new	Guarda en la BBDD una celebración
-7	get	/celebrations/delete?id=xxx	Elimina de la BBDD una celebración (sólo Admin)
-8	get	/celebrations/edit?id=xxx	Muestra el formulario para editar una celebración
-9	post	/celebrations/edit?id=xxx	Edita en la BBDD la celebración
-10	get	/signup	Muestra el formulario de registro
-11	post	/signup	Guarda el usuario en la BBDD
-12	get	/login	Muestra formulario de inicio de sesión
-13	post	/login	Gestiona el inicio de sesión
-14	get	/close	Cierra sesión
-15	get	/admin/user-list	Muestra lista de usuarios (sólo Admin)
-17	get	/admin/delete/:user_id	Borra usuario (sólo Admin)
-18	get	/admin/edit/:user_id	Muestra formulario de edición de usuario (sólo Admin)
-19	post	/admin/edit/:user_id	Edita usuario en BBDD
-
-
-
+1	get	/countries/list			Show the countries list
+2	get	/countries/:id***		Show country details
+3	get	/celebrations/list		Show celebrations list
+4	post	/celebrations/search		Search bar for celebrations
+5	get	/celebrations/details***	Show celebration details
+6	get	/celebrations/new		Show the create new celebration form
+7	post	/celebrations/new		Upload the new celebration on the database
+8	get	/celebrations/delete?id=xxx	Delete a celebration from the database (Admin only)
+9	get	/celebrations/edit?id=xxx	Show the edit celebration form
+10	post	/celebrations/edit?id=xxx	Edit celebration on the database
+11	get	/signup				Show the register form
+12	post	/signup				Upload the user on the database
+13	get	/login				Show the login form
+14	post	/login				Manage login
+15	get	/close				Close session
+16	get	/admin/user-list		Show the users list (Admin only)
+17	post	/admin/search			Search bar for users list (Admin only)
+18	get	/admin/delete/:user_id		Delete user (Admin only)
+19	get	/admin/new			Show the form to create new user (Admin only)
+20	post	/admin/new			Upload a the new user on the database (Admin only)
+21	get	/admin/edit/:user_id		Show the edit users form (Admin only)
+22	post	/admin/edit/:user_id		Edit the user on the database
+23	get	/				Show the index
+24	get	/profile			Show profiles 		
 Views:
--	Homepage
+-	Index home page
 -	Layout
 -	Not found
 -	Error
--	Lista de países
--	Detalles país
--	Lista de celebraciones
--	Detalles celebración
--	Formulario nueva celebración
--	Formulario edición de celebración
--	Formulario de registro
--	Formulario de iniciar sesión
--	Lista de usuarios
--	Formulario de edición de usuario
-
-
-Run npm install
-Añadir dependencias: bcryptjs, connect-flash, express-session, passport, passport-local  
+-	Profile
+-	Sing Up
+-	Log In
+-	Countries-list
+-	Country-details
+-	CelebrationPartials
+-	Celebrations-list
+-	Celebrations-details
+-	Celebrations-details-search
+-	Celebrations-new
+-	Celebrations-edit
+-	Users-list
+-	Users-details-search
+-	Users-new
+-	Users-edit

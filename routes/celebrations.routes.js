@@ -32,15 +32,15 @@ router.post('/search', (req, res, next) => {
             res.render("celebrations/celebrations-details-search", { returnedCelebrations })
         })
         .catch(err => next(err))
-
 })
+
 
 // Celebrations Details
 
 router.get('/details/:celebration_id', (req, res, next) => {
 
     let isAdmin = false
-    
+        
     if (req.user) {
         let userRole = req.user.role  
         if (userRole === "ADMIN") {
@@ -52,7 +52,14 @@ router.get('/details/:celebration_id', (req, res, next) => {
 
     Celebration
         .findById(celebrationId)
-        .then(theCelebration => res.render('celebrations/celebrations-details', { theCelebration, isAdmin }))
+        .then(theCelebration => {
+            let theCelebrationCountry = theCelebration.country
+            let countryArray = theCelebrationCountry[0].split(', ')
+           
+            theCelebration.country = countryArray
+            
+            res.render('celebrations/celebrations-details', { theCelebration, isAdmin })
+        })
         .catch(err => next(err))
 })
 
@@ -107,13 +114,12 @@ router.post('/edit-celebration', (req, res, next) => {
 
     const celebrationId = req.query.celebration_id
 
-    const { name, date, description, traditions, country, links } = req.body
+    const { name, date, description, traditions, country, links, image } = req.body
     
     Celebration
-        .findByIdAndUpdate(celebrationId, { name, date, description, traditions, country, links })
+        .findByIdAndUpdate(celebrationId, { name, date, description, traditions, country, links, image })
         .then(() => res.redirect('/celebrations'))
         .catch(err => next(err))
-
     })
 
 

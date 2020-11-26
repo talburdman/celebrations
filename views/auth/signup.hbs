@@ -1,5 +1,7 @@
 <div class="container">
+
     <div class="row justify-content-center">
+
         <div class="col-md-6">
 
             <div class="title row justify-content-center">
@@ -7,40 +9,50 @@
             </div>
 
             <form action="/signup" method="POST">
+
                 <div class="main celebration">
                     <div class='form-group'>
                         <label for='username'>Username</label>
                         <input name='username' type='text' class='form-control' placeholder='Username' id='username'>
                     </div>
+
                     <div class='form-group'>
                         <label for='name'>Name</label>
                         <input name='name' type='text' class='form-control' placeholder='Name' id='name'>
                     </div>
+
                     <div class='form-group'>
                         <label for='description'>About you</label>
                         <input name='description' type='text' class='form-control' placeholder='About you'
                             id='description'>
                     </div>
+
                     <div class='form-group'>
                         <label for='email'>Email</label>
                         <input name='email' type='email' class='form-control' placeholder='youremail@address.com'
                             id='email'>
                     </div>
+
                     <div class='form-group'>
                         <label for='password'>Password</label>
                         <input name='password' type='password' class='form-control' placeholder='******' id='password'>
                     </div>
-
                 </div>
+
                 <div class="row justify-content-center">
                     <button type='submit' class='btn'>Sign up</button>
+
                     {{#if errorMsg}}
                     <p style="margin-top: 10px;background: red; color: white; text-align: center; padding: 10px">
                         {{errorMsg}}</p>
                     {{/if}}
+
                 </div>
+
             </form>
 
         </div>
+
     </div>
+
 </div>

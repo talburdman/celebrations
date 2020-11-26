@@ -1,22 +1,13 @@
 <div class="container">
-    <h2>{{name}}</h2>
 
-    <hr>
-    <p><strong>Description</strong> {{description}}</p>
-    <br>
-    <p><strong>Continent:</strong> {{continent}}</p>
-    <br>
-    <p><strong>Location</strong> {{location}}</p>
-    <br>
-    <img src="" alt="{{name}}">
+    <div id="countryDetails"></div>
 
-
-    <button type="button" class="btn btn-secondary">
-        <a href="/countries">Back to Countries</a>
-    </button>
+    <div class="row justify-content-center">
+        <a href="/countries" class="btn">Back To Countries</a>
+    </div>
 
 </div>
 
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script src="/javascripts/api-handler.js"></script>
-<script src="/javascripts/app-front.js"></script>
+<script src="/javascripts/country-details.js"></script>

@@ -1,10 +1,14 @@
 <div class="container">
 
     <div class="title row justify-content-center">
-        <h2>Name: {{theCelebration.name}}</h2>
+        <h2>{{theCelebration.name}}</h2>
+    </div>
+    <hr>
+
+    <div class="celebImg">
+        <img src="{{theCelebration.image}}" alt="{{theCelebration.name}}">
     </div>
 
-    <hr>
     <div class="main showdetails">
         <p><strong>Date:</strong> {{theCelebration.date}}</p>
         <br>
@@ -12,14 +16,18 @@
         <br>
         <p><strong>Traditions:</strong> {{theCelebration.traditions}}</p>
         <br>
-        <p><strong>Country/ Countries:</strong> {{theCelebration.country}}</p>
+        <p><strong>Country/ Countries:</strong>
+            {{#each theCelebration.country}}
+            <a href="/countries/details/{{this}}">{{this}}</a>
+            {{/each}}
+        </p>
         <br>
-        <p><strong>Links:</strong> {{theCelebration.links}}</p>
+
+        {{!-- <a href="/countries/details/{{theCelebration.}}">{{theCelebration.country}}</a> --}}
+        <p><strong>Links: </strong><a href="{{theCelebration.links}}">{{theCelebration.links}}</p></a></p>
         <br>
     </div>
-    <div>
-        <img src="{theCelebration.image}}" alt="{{name}}">
-    </div>
+
     <br>
     <hr>
     <div class="row justify-content-center">
@@ -28,18 +36,17 @@
     </div>
 
     {{#if isAdmin}}
+
     <div class="row justify-content-center">
-        <a href="/celebrations/edit-celebration?celebration_id={{_id}}" class="btn">Edit</a>
-        <a href="/celebrations/delete-celebration?celebration_id={{_id}}" class="btn">Delete</a>
+        <a href="/celebrations/edit-celebration?celebration_id={{theCelebration.id}}" class="btn">Edit</a>
+        <a href="/celebrations/delete-celebration?celebration_id={{theCelebration.id}}" class="btn">Delete</a>
     </div>
+
     {{/if}}
 
     <div class="row justify-content-center">
         <a href="/celebrations" class="btn">Back To Celebrations</a>
         <a href="/" class="btn">Back To Home</a>
     </div>
-
-
-
 
 </div>

@@ -1,8 +1,11 @@
 <div class="container">
+
     <div class="title">
         <h2>Edit {{name}}</h2>
     </div>
+
     <form method="POST" action="/admin/edit-user?user_id={{_id}}">
+
         <div class="main">
             <div class="form">
                 <label>Username</label>
@@ -10,30 +13,36 @@
             </div>
 
             <div class="form">
-                <label>User's Name</label>
+                <label>Name</label>
                 <input type="text" class="form-control" name="name" value="{{name}}">
             </div>
+
             <div class="form">
-                <label>User Password</label>
+                <label>Password</label>
                 <input type="text" class="form-control" name="password">
             </div>
+
             <div class="form">
                 <label>User Description</label>
                 <input type="text" class="form-control" name="description" value="{{description}}">
             </div>
+
             <div class="form">
-                <label>User Role</label>
+                <label>Role</label>
                 <input type="text" class="form-control" name="role" value="{{role}}">
             </div>
+
             <div class="form">
-                <label>User email</label>
+                <label>Email</label>
                 <input type="email" class="form-control" name="email" value="{{email}}">
             </div>
         </div>
+
         <div class="row justify-content-center">
             <button type="submit" class="btn ">Edit User</button>
             <a href="/admin/users-list" class="btn">Back To Users List</a>
         </div>
-        {{!-- <button type="submit" class="btn ">Edit User</button> --}}
+
     </form>
+
 </div>
