@@ -5,6 +5,7 @@ body {
 h1,
 h2,
 h3,
+h4,
 p {
   color: #494949;
   font-weight: 100;
@@ -102,16 +103,12 @@ p {
 #footer {
   background-color: #494949;
   padding: 5px 15px;
-  position: fixed;
-  left: 0;
   bottom: 0;
-  width: 100%;
-  margin-top: 100px; }
+  width: 100%; }
 
 .p-footer {
   color: #FF9642;
-  text-align: end;
-  margin-left: 650px; }
+  text-align: end; }
 
 .celebImg img {
   height: 300px;
