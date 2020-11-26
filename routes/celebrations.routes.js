@@ -53,6 +53,7 @@ router.get('/details/:celebration_id', (req, res, next) => {
     Celebration
         .findById(celebrationId)
         .then(theCelebration => {
+            
             let theCelebrationCountry = theCelebration.country
             let countryArray = theCelebrationCountry[0].split(', ')
            
@@ -73,10 +74,10 @@ router.get('/new', ensureAuthenticated, checkRole(['USER', 'ADMIN']), (req, res,
 
 router.post('/new', (req, res, next) => {
 
-    const { name, date, description, traditions, country } = req.body
+    const { name, date, description, traditions, country, image } = req.body
     
     Celebration
-        .create({ name, date, description, traditions, country })
+        .create({ name, date, description, traditions, country, image })
         .then(() => res.redirect('/celebrations'))
         .catch(err => next(err))
 })

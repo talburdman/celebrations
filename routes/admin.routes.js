@@ -34,6 +34,18 @@ router.post('/search', (req, res, next) => {
 })
 
 
+// User Details
+
+router.get('/profile/:user_id', (req, res, next) => {
+
+    const userId = req.params.user_id
+
+    User
+        .findById(userId)
+        .then(theUser =>  res.render('profile', theUser))
+        .catch(err => next(err))
+})
+
 // Delete User
 
 router.get('/delete-user', (req, res, next) => {
