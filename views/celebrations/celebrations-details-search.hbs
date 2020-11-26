@@ -1,0 +1,26 @@
+<div class="container">
+
+    {{#each returnedCelebrations}}
+    <div class="title row justify-content-center">
+        <h2>Name: {{name}}</h2>
+    </div>
+
+    <hr>
+    <div class="main showdetails">
+        <p><strong>Date:</strong> {{date}}</p>
+        <br>
+        <p><strong>Description:</strong> {{description}}</p>
+        <br>
+        <p><strong>Traditions:</strong> {{traditions}}</p>
+        <br>
+        <p><strong>Country/ Countries:</strong> {{country}}</p>
+        <br>
+        <p><strong>Links:</strong> {{links}}</p>
+        <br>
+    </div>
+    <div>
+        <img src="{theCelebration.image}}" alt="{{name}}">
+    </div>
+    {{/each}}
+
+</div>

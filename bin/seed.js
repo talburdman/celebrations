@@ -12,7 +12,7 @@ const celebrations = [
         traditions: 'Family meeting and dinner the 25th, singing carols, exchanging presents, sending cards.',
         country: ['Angola, Argentina, Armenia, Australia, Austria, Bangladesh, Belarus, Belgium, Bolivia, Botswana, Brazil, Bulgaria, Canada, Chile, China, Colombia, Costa Rica, Croatia, Cuba, Czechia / Czech Rep., DR Congo, Denmark, Egypt, Estonia, Ethiopia, Falkland Islands, Finland, France, Georgia, Germany, Ghana, Greece, Greenland, Guatemala, Haiti, Hong Kong, Hungary, Iceland, India, Indonesia, Ireland, Israel, Italy, Jamaica, Japan, Kazakhstan, Kenya, Latvia, Lebanon, Lithuania, Madagascar, Mali, Malta, Mexico, Montenegro, Namibia, The Netherlands, New Zealand, Nigeria, North Macedonia, Norway, Pakistan, The Palestinian Territories, Peru, Philippines, Poland, Portugal, Puerto Rico, Romania, Russia, Serbia, Singapore, Slovakia, South Africa, South Korea, Spain, Sri Lanka, Sweden, Switzerland, Taiwan, Trinidad and Tobago, UK, Ukraine, USA, Venezuela, Vietnam, Zambia, Zimbabwe'],
         links: ["https://www.whychristmas.com/"],
-        image: "String",
+        image: "https://p4.wallpaperbetter.com/wallpaper/187/853/118/christmas-wallpaper-preview.jpg",
 
     },
     {
@@ -22,7 +22,7 @@ const celebrations = [
         traditions: 'Dressing with costumes, gift candies and other treats to kids, candles, nigth meetings.',
         country: ['Australia, Austria, Belgium, Canada, Czechia / Czech Rep., France, Germany, Greece, Hong Kong, Ireland, Italy, Japan, New Zealand, Philippines, Poland, Romania, Russia, Serbia, Singapore, Spain, Sweden, Switzerland, UK, USA.'],
         links: ["https://en.wikipedia.org/wiki/Geography_of_Halloween"],
-        image: "String",
+        image: "https://p4.wallpaperbetter.com/wallpaper/985/557/70/halloween-pumpkin-city-holiday-wallpaper-preview.jpg",
 
     },
     {
@@ -32,7 +32,7 @@ const celebrations = [
         traditions: 'Ritual representations and processions, decorating eggs, searching of eggs.',
         country: ['Andorra, Anguilla, Angola, Antigua and Barbuda, Argentina, Armenia, Aruba, Australia, Austria, Bahamas, Barbados, Belarus, Belgium, Belize, Benin, Bolivia, Botswana, Bosnia and Hezergovina, Burkina Faso, Brazil, Bulgaria, Canada, Central African Republic, Chad, Chile, Colombia, Costa Rica, Croatia, Cuba, Czechia / Czech Rep., DR Congo, Denmark, Dominica, Egypt (coptics), Estonia, Ethiopia, Faroe Islands, Fiji, Finland, France, Gabon, Gambia, Georgia, Germany, Ghana, Greece, Greenland, Guatemala, Guinea, Guyana, Haiti, Hong Kong, Hungary, Iceland, Ireland, Italy, Ivory Coast, Jamaica, Kenya, Latvia, Lebanon, Lithuania, Macau, Madagascar, Mali, Malta, Mexico, Montenegro, Namibia, The Netherlands, New Zealand, Nigeria, North Macedonia, Norway, Papua New Guinea, Peru, Philippines, Poland, Portugal, Puerto Rico, Romania, Russia, Senegal, Serbia, Slovakia, Slovenia, South Africa, South Sudan, Spain, Sweden, Switzerland, Tanzania, Trinidad and Tobago, UK, Ukraine, Uganda, Venezuela, Zambia, Zimbabwe'],
         links: ["https://en.wikipedia.org/wiki/Easter_traditions"],
-        image: "String",
+        image: "https://p4.wallpaperbetter.com/wallpaper/161/690/529/easter-wallpaper-preview.jpg",
 
     },
     {
@@ -42,7 +42,7 @@ const celebrations = [
         traditions: 'Costumes, costume parties, parades, feast, foods, masquerades, balls, reversing roles.',
         country: ['Albania, Angola, Argentina, Australia, Belgium, Bolivia, Brazil, Bulgaria, Canada, Cape Verde, Chile, China, Colombia, Costa Rica, Croatia, Cuba, Czechia / Czech Rep., Denmark,Falkland Islands, France, Germany, Ghana, Greece, Guatemala, Haiti, Hong Kong, Hungary, India, Indonesia, Israel, Italy, Jamaica, Kenya, Latvia, Lithuania, Malta, Mexico, The Netherlands, Nigeria, Peru, Poland, Portugal, Puerto Rico, Russia, Slovenia, South Africa, South Korea, Spain, Switzerland, Trinidad and Tobago, UK, Ukraine, USA, Venezuela, Zimbabwe'],
         links: ["https://www.carnivaland.net/"],
-        image: "String",
+        image: "https://p4.wallpaperbetter.com/wallpaper/195/368/946/mardi-gras-peoples-christian-carnival-mask-spring-meeting-wallpaper-preview.jpg",
 
     },
     {
@@ -52,7 +52,7 @@ const celebrations = [
         traditions: 'Create and decorate paper lanterns, solving riddles, practicing divination, eat yuanxiao, folkloric dances.',
         country: ['China'],
         links: ["https://en.wikipedia.org/wiki/Lantern_Festival"],
-        image: "String",
+        image: "https://images.unsplash.com/photo-1584006126905-c46851959a78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80",
 
     },
     {
@@ -62,7 +62,7 @@ const celebrations = [
         traditions: 'Create and decorate paper lanterns, solving riddles, practicing divination, eat yuanxiao, folkloric dances.',
         country: ['Tanzania (semi-autonomous region of Zanzibar)'],
         links: ["https://www.tanzaniatourism.go.tz/en/things-to-do/mwaka-kogwa-festival/P30"],
-        image: "String",
+        image: "https://images.squarespace-cdn.com/content/v1/5a0146344c326d200609f91b/1532715544546-YYBV6K9ZZ3N4EF3EUDGB/ke17ZwdGBToddI8pDm48kLkXF2pIyv_F2eUT9F60jBl7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0iyqMbMesKd95J-X4EagrgU9L3Sa3U8cogeb0tjXbfawd0urKshkc5MgdBeJmALQKw/EDIT_MG_3077.jpg?format=2500w",
 
     },
     {
@@ -72,17 +72,17 @@ const celebrations = [
         traditions: 'iAdoration of the Sun, dancing, singing.',
         country: ['Perú, ecuador, Bolivia'],
         links: ["https://en.wikipedia.org/wiki/Inti_Raymi"],
-        image: "String",
+        image: "https://images.unsplash.com/photo-1561503152-fda6a4423b86?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
 
     },
     {
-        name: 'Mekel',
+        name: 'Meskel',
         date: 'September the 27th.',
         description: 'A christian celebration of the Ethiopian and Eritrean Orthodox Faith who commemorates the discover of the True Cross os Jesus. It is said that it was Saint Helena, Roman empress of ancient times, the one who found it thanks to a revelation dream and the smoke of a bonefire. This is represented today by the Demera, a largue bonfire and central piece of the celebrations of Meskel. If you are tired of typical catholic processions, this could be a good chance to discover another face of the faith!',
         traditions: 'Parties, bonfires, fireworks, paint cross figures in the forehead with charcoal of the Demera.',
         country: ['Ethiopia, Eritrea'],
         links: ["https://en.wikipedia.org/wiki/Meskel"],
-        image: "String",
+        image: "https://borkena.com/wp-content/uploads/2019/09/Meskel-Demera-_-EBC-_-Ethiopia.jpg",
 
     },
     {
@@ -92,7 +92,7 @@ const celebrations = [
         traditions: 'Parties, bonfires, fireworks, paint cross figures in the forehead with charcoal of the Demera.',
         country: ['Japan'],
         links: ["https://www.nippon.com/en/features/jg00031/"],
-        image: "String",
+        image: "https://rimage.gnst.jp/livejapan.com/public/article/detail/a/00/00/a0000994/img/basic/a0000994_main.jpg",
 
     },
     {
@@ -102,7 +102,7 @@ const celebrations = [
         traditions: 'Parties, bonfires, fireworks, paint cross figures in the forehead with charcoal of the Demera.',
         country: ['Ireland, UK, USA'],
         links: ["https://www.britannica.com/topic/Saint-Patricks-Day"],
-        image: "String",
+        image: "https://p4.wallpaperbetter.com/wallpaper/775/227/773/saint-patricks-day-ireland-festival-green-wallpaper-preview.jpg",
 
     },
     {
@@ -112,7 +112,7 @@ const celebrations = [
         traditions: 'Bonfires, colour "wars", forgiving other, singing, dancing.',
         country: ['India'],
         links: ["https://www.holifestival.org/"],
-        image: "String",
+        image: "https://p4.wallpaperbetter.com/wallpaper/447/420/932/color-colours-festival-hindu-wallpaper-preview.jpg",
 
     },
     {
@@ -122,7 +122,7 @@ const celebrations = [
         traditions: 'Dancing the Yakee, choral sing, competitions of resistance, strength, dexterity...',
         country: ['Camerun, Chad, DR Congo, Níger, Nigeria'],
         links: ["https://en.wikipedia.org/wiki/Gu%C3%A9rewol"],
-        image: "String",
+        image: "https://kumakonda.es/wp-content/uploads/Festival-Gerewol-147-768x512.jpg",
 
     },
     {
@@ -132,7 +132,7 @@ const celebrations = [
         traditions: 'Love letters, chocolate gifts, flowers, Valentine`s cards.',
         country: ['Argentina, Armenia, Australia, Austria, Belarus, Belgium, Bolivia, Brazil, Bulgaria, Canada, Chile, China, Colombia, Costa Rica, Croatia, Cuba, Czechia / Czech Rep., Denmark, Estonia, Finland, France, Georgia, Germany, Greece, Greenland, Guatemala, Haiti, Hong Kong, Hungary, Iceland, India, Ireland, Israel, Italy, Jamaica, Japan, Latvia, Lebanon, Lithuania, Malta, Mexico, The Netherlands, New Zealand, Norway, Pakistan, Peru, Philippines, Poland, Portugal, Puerto Rico, Romania, Russia, Serbia, Slovakia, Spain, Sweden, Switzerland, Taiwan, Trinidad and Tobago, UK, Ukraine, USA, Venezuela'],
         links: ["https://en.wikipedia.org/wiki/Valentine%27s_Day"],
-        image: "String",
+        image: "https://us.as.com/us/imagenes/2020/02/13/tikitakas/1581552012_285545_1581552671_noticia_normal.jpg",
 
     },
     {
@@ -142,8 +142,7 @@ const celebrations = [
         traditions: 'Love letters, chocolate gifts, flowers, Valentine`s cards.',
         country: ['Ecuador'],
         links: ["https://www.ecuador.com/blog/the-exuberant-festival-of-la-mama-negra/"],
-        image: "String",
-
+        image: "https://upload.wikimedia.org/wikipedia/commons/6/6f/Mama_Negra_2019.jpg"
     },
    
 ]

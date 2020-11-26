@@ -20,6 +20,21 @@ router.get('/', (req, res, next) => {
 })
 
 
+// Celebrations Search
+
+router.post('/search', (req, res, next) => {
+
+    let festivity = req.body.celebrationName
+    let regex = new RegExp(festivity, "i")
+
+    Celebration.find({ $or: [{ name: regex }, { description: regex }, { traditions: regex }, { country: regex }] })
+        .then(returnedCelebrations => {
+            res.render("celebrations/celebrations-details-search", { returnedCelebrations })
+        })
+        .catch(err => next(err))
+
+})
+
 // Celebrations Details
 
 router.get('/details/:celebration_id', (req, res, next) => {
@@ -86,16 +101,16 @@ router.get('/edit-celebration', ensureAuthenticated, checkRole(['ADMIN']), (req,
 })
 
 
-// Edit For Users Post
+// Edit Celebrations Post
 
 router.post('/edit-celebration', (req, res, next) => {
 
     const celebrationId = req.query.celebration_id
 
-    const { name, date, description, traditions, country } = req.body
+    const { name, date, description, traditions, country, links } = req.body
     
     Celebration
-        .findByIdAndUpdate(celebrationId, { name, date, description, traditions, country })
+        .findByIdAndUpdate(celebrationId, { name, date, description, traditions, country, links })
         .then(() => res.redirect('/celebrations'))
         .catch(err => next(err))
 
