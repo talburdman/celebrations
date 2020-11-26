@@ -23,17 +23,18 @@ function getCountry() {
         <div>
         <img src="${elm.flag}" alt="${elm.name}" class="img-flag">
         </div>
-        <p><strong>Capital: </strong> ${elm.capital}</p>
+        <h4><strong>Capital: </strong> ${elm.capital}</h4>
         <br>
-        <p><strong>Native Name: </strong> ${elm.nativeName}</p>
+        <h4><strong>Native Name: </strong> ${elm.nativeName}</h4>
         <br>
-        <p><strong>Continent: </strong> ${elm.region}</p>
+        <h4><strong>Continent: </strong> ${elm.region}</h4>
         <br>
-        <p><strong>Population: </strong> ${elm.population}</p>
+        <h4><strong>Population: </strong> ${elm.population}</h4>
         <br>
-        <p><strong>Language: </strong> ${elm.languages[0].name}</p>
+        <h4><strong>Language: </strong> ${elm.languages[0].name}</ha>
         <br>
-        <p><strong>Currency: </strong> ${elm.currencies[0].name}</p>
+        <br>
+        <h4><strong>Currency: </strong> ${elm.currencies[0].name}</ha>
         <br>`
                
             })
