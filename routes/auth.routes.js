@@ -33,7 +33,7 @@ router.post("/signup", (req, res, next) => {
                 return
             }
 
-            // Other validations
+            // Other Validations
             const salt = bcryptjs.genSaltSync(bcryptSalt)
             const hashPass = bcryptjs.hashSync(password, salt)
 
